@@ -1,0 +1,77 @@
+\cleardoublepage
+\chapter{绪论}
+\thispagestyle{fancy}  % 强制设置该章第一页的页眉样式
+\section{研究背景和意义}
+
+\section{国内外研究现状}
+
+
+\newpage
+\section{研究目的和主要工作}
+
+\newpage
+\section{论文的组织结构}
+
+
+\chapter{相关技术}
+\thispagestyle{fancy}  % 强制设置该章第一页的页眉样式
+\section{AAAA}
+
+\section{BBB}
+
+\section{CCC}
+
+
+\chapter{图片使用}
+\thispagestyle{fancy}  % 强制设置该章第一页的页眉样式
+\section{单个图片}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/testforpic.pdf}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\section{多个图片}
+\begin{figure}[h]
+    \centering
+    \subfigure[]{\includegraphics[width=0.3\linewidth]{images/testforpic.pdf}}
+    \subfigure[]{\includegraphics[width=0.3\linewidth]{images/testforpic.pdf}}
+    \caption{Caption}
+    \label{fig:enter-label2}
+\end{figure}
+
+\chapter{表格使用}
+\thispagestyle{fancy}  % 强制设置该章第一页的页眉样式
+\section{三线表}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+        \toprule
+        A & B & B & B & B\\
+        \midrule
+        C & D & & & \\
+        \midrule
+        E & F & & & \\
+        \bottomrule
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+\chapter{公式使用}
+\section{单行公式}
+\begin{equation}\label{eqn:5-1}
+    A = B + \sum_{i=1}^{n}C_{i}
+\end{equation}
+\section{多行公式}
+\begin{subequations}
+\begin{align}
+    A &= C + E \label{eqn:5-2a}\\
+      B  &= F + \sum_{i=1}^{n} G_{i}\label{eqn:5-2b}
+\end{align}
+\end{subequations}
+    
+\chapter{结论}
+\thispagestyle{fancy}
+本文总结了研究发现，提出了相关建议...

@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{report}
+
+% 页面设置
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+% \usepackage{float}%提供float浮动环境
+\usepackage{booktabs}%提供命令
+\usepackage{tocbibind}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colortbl}
+\definecolor{mygray}{gray}{0.15}
+\definecolor{ccr}{RGB}{0,100,20}
+
+\usepackage{hyperref}
+\hypersetup{hypertex=true,
+    colorlinks=true,
+    linkcolor=mygray,
+    anchorcolor=ccr,
+    citecolor=ccr,
+    urlcolor=ccr}
+
+\usepackage{titlesec} % 导入 titlesec 宏包
+% 调整章节标题与顶部的距离
+\titlespacing*{\chapter}{0pt}{-10pt}{20pt}
+
+% 定义章节标题格式
+\titleformat{\chapter}[block]{\centering\Large\bfseries}{第\chinese{chapter}章}{1em}{}
+
+\titleformat{\section}
+  {\large\bfseries} % 修改字号和字体样式
+  {\thesection} % 章节编号
+  {1em} % 编号与标题之间的间距
+  {} % 标题前的格式化内容
+
+% 导入 fancyhdr 宏包
+\usepackage{fancyhdr}  % 用于设置页眉页脚
+% 设置页面风格
+\pagestyle{fancy}
+% 定义页眉和页脚
+\fancyhf{}  % 清空默认的页眉和页脚
+% 设置页眉内容
+% -------------------------
+% \fancyhead[L]{第~\chinese{chapter}~章}    % 左侧页眉 - 显示当前章节编号
+% \fancyhead[C]{深度神经网络的视觉语义特征可解释技术研究}          % 中间页眉 - 显示论文题目
+% \fancyhead[R]{\rightmark}               % 右侧页眉 - 显示作者名字
+% -------------------------
+\fancyhead[C]{\ifodd\value{page} \else xxx研究 \fi}
+\fancyhead[LO]{\ifodd\value{page} 第~\chinese{chapter}~章 \else \fi}
+\fancyhead[RO]{\ifodd\value{page} 温州大学硕士学位论文 \else \fi}
+% ----------------------
+% 自定义页眉：判断是否为章节页面
+
+
+% 设置页脚内容
+\fancyfoot[C]{\thepage}             % 中间页脚 - 显示页码
+
+\title{毕业论文题目}  % 默认主标题（可以在 titlepage.tex 中覆盖）
+\author{Zewen Yu}      % 默认作者（可以在 titlepage.tex 中覆盖）
+\date{\today}        % 默认日期（可以在 titlepage.tex 中覆盖）
+
+\begin{document}
+
+% 引用封面
+\input{titlepage.tex}
+% 引用摘要
+\input{abstract.tex}
+\tableofcontents  % 自动生成目录
+
+% 引用正文
+\input{paper.tex}
+
+\bibliographystyle{gbt7714-2005}
+\bibliography{references}
+
+\input{thanks.tex}
+\input{contribution.tex}
+\end{document}
