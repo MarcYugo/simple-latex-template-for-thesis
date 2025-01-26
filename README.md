@@ -19,8 +19,8 @@
 这里使用作者的本科学校和硕士学校作为样例。
 
 1. 本科毕业设计（论文）
-   <iframe src="examples/master_thesis_template.pdf" width="800" height="600"></iframe> 
+   ![](./images/undergraduate-thesis-template.png) 
 2. 硕士毕业论文
-    <iframe src="examples/undergraduate_thesis_template.pdf" width="800" height="600"></iframe> 
+   ![](./images/master-thesis-template.png) 
 ### 致谢
 [国标参考文献格式文件](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
